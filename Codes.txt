@@ -1,0 +1,105 @@
+====================================================
+        Linux Shell Scripting 2025_04_04
+====================================================
+
+Q1) Fibonacci Series (First 10 Numbers)
+---------------------------------------
+File: Q1.sh
+
+Script:
+echo "Enter number: "
+read number
+
+fibonacci(){
+  local a=0
+  local b=1
+  local count=$1
+
+  echo "First $count fibonacci numbers"
+  for((i=0;i<$count;i++))
+  do
+    echo -n "$a "
+    local fn=$((a + b))
+    a=$b
+    b=$fn
+  done
+  echo ""
+}
+
+fibonacci $number
+
+Run:
+chmod 777 Q1.sh  
+./Q1.sh
+
+Example Output:
+Enter number:  
+10  
+First 10 fibonacci numbers  
+0 1 1 2 3 5 8 13 21 34  
+
+************************************************************
+
+Q2) Factorial of a Number
+--------------------------
+File: Q2.sh
+
+Script:
+echo "Enter number to find factorial: "
+read number
+fact=1
+for ((i=number;i>0;i--))
+do
+  fact=$((fact * i))
+done
+
+echo "Factorial of $number is: $fact"
+
+Run:
+chmod 777 Q2.sh  
+./Q2.sh
+
+Example Output:
+Enter number to find factorial:  
+5  
+Factorial of 5 is: 120  
+
+************************************************************
+
+Q3) Find Multiples of 3 in Range 1 to 50
+----------------------------------------
+File: Q3.sh
+
+Script:
+for((i=1;i<=50;i++))
+do
+  rem=$(($i % 3))
+  if [ $rem == 0 ]
+  then
+    echo "$i"
+  fi
+done
+
+Run:
+chmod 777 Q3.sh  
+./Q3.sh
+
+Example Output:
+3  
+6  
+9  
+12  
+15  
+18  
+21  
+24  
+27  
+30  
+33  
+36  
+39  
+42  
+45  
+48  
+
+====================================================
