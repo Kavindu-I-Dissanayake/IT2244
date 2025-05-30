@@ -49,7 +49,7 @@ chmod 777 Q2.sh
 
 Output:
 Enter the name :
-Sanka
+Kavindu
 Enter Sub-1 marks :
 75
 Enter Sub-2 marks :
