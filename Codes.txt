@@ -139,7 +139,7 @@ Q5) Verify if Username is "Mino"
 File: Q5.sh
 
 Script:
-username="Mino"
+username="Kavi"
 echo "Enter user name: "
 read name
 if [ "$username" = "$name" ]; then
