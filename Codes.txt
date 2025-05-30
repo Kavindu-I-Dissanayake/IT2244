@@ -158,7 +158,7 @@ Pasi
 User name is incorrect
 
 Enter user name :
-Mino
+Kavi
 User name is correct
 
 ************************************************************
