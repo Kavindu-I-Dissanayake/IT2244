@@ -39,7 +39,7 @@ Can get help
 
 Q2) Sum and Multiplication of List of Numbers Using for Loop
 -------------------------------------------------------------
-File: Q2.sh
+File: Q8.sh
 
 Script:
 numbers=(1 2 3 4 5)
@@ -55,8 +55,8 @@ echo "Summation = $sum"
 echo "Multiplication = $mul"
 
 Run:
-chmod 777 Q2.sh  
-./Q2.sh
+chmod 777 Q8.sh  
+./Q8.sh
 
 Output:
 Numbers: 1 2 3 4 5  
@@ -67,7 +67,7 @@ Multiplication = 120
 
 Q3) Print Integers from 1 to 10 Using While Loop
 ------------------------------------------------
-File: Q3.sh
+File: Q9.sh
 
 Script:
 num=1
@@ -78,8 +78,8 @@ do
 done
 
 Run:
-chmod 777 Q3.sh  
-./Q3.sh
+chmod 777 Q9.sh  
+./Q9.sh
 
 Output:
 1  
@@ -97,7 +97,7 @@ Output:
 
 Q4) Print the Following Patterns
 --------------------------------
-File: Q4.sh
+File: Q10.sh
 
 a) Increasing Pattern (Rows = 7, Columns = 7)
 
@@ -110,6 +110,11 @@ do
   done
   echo ""
 done
+
+Run:
+chmod 777 Q10.sh  
+./Q10.sh
+
 
 Output:
 *  
@@ -144,7 +149,7 @@ Output:
 *  
 
 Run:
-chmod 777 Q4.sh  
-./Q4.sh
+chmod 777 Q11.sh  
+./Q11.sh
 
 ====================================================
