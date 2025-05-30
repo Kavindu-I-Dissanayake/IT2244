@@ -1,138 +1,58 @@
 ====================================================
-        Linux Shell Scripting 2025_04_18
+        Linux Shell Scripting Assignment - Part 5
 ====================================================
 
-Q1) Print Multiplication Table Using For Loop
----------------------------------------------
-File: mulTable.sh
+Q1) Find the LCM of two numbers (a, b) and GCD of two numbers (b, c)
+--------------------------------------------------------------------
+File: LCMGCM.sh
 
 Script:
-echo "Enter multiplier: "
-read x
+echo "Enter number a: "
+read a
+echo "Enter number b: "
+read b
+echo "Enter number c: "
+read c
 
-for ((i=1; i<=12; i++))
-do
-  ans=$((x * i))
-  echo "$i x $x = $ans"
+# Calculate GCD of a and b
+x=$a
+y=$b
+while [ $y -ne 0 ]; do
+    temp=$y
+    y=$((x % y))
+    x=$temp
 done
+gcd_ab=$x
+
+# Calculate LCM using GCD
+lcm_ab=$(( (a * b) / gcd_ab ))
+
+# Calculate GCD of b and c
+x=$b
+y=$c
+while [ $y -ne 0 ]; do
+    temp=$y
+    y=$((x % y))
+    x=$temp
+done
+gcd_bc=$x
+
+# Display Results
+echo "LCM of $a and $b is: $lcm_ab"
+echo "GCD of $b and $c is: $gcd_bc"
+
+Run:
+chmod 777 LCMGCM.sh  
+./LCMGCM.sh
 
 Example Output:
-Enter multiplier:
-2
-1 x 2 = 2
-2 x 2 = 4
-...
-12 x 2 = 24
-
-====================================================
-
-Q2) Print Diamond Star Pattern
-------------------------------
-File: diamondRect.sh
-
-Script:
-# Upper triangle
-for ((i=1; i<=7; i++))
-do
-  for ((j=1; j<=7-i; j++))
-  do
-    echo -n " "
-  done
-  for ((k=1; k<2*i; k++))
-  do
-    echo -n "*"
-  done
-  echo ""
-done
-
-# Lower inverted triangle
-for ((i=6; i>=1; i--))
-do
-  for ((j=1; j<=7-i; j++))
-  do
-    echo -n " "
-  done
-  for ((k=1; k<2*i; k++))
-  do
-    echo -n "*"
-  done
-  echo ""
-done
-
-Output:
-     *
-    ***
-   *****
-  *******
- *********
-  *******
-   *****
-    ***
-     *
-
-====================================================
-
-Q3) Sum of the First 10 Fibonacci Numbers
-----------------------------------------
-File: sumFibo.sh
-
-Script:
-a=0
-b=1
-sum=0
-
-for (( i=0; i<10; i++ ))
-do
-  echo "$a"
-  c=$((a + b))
-  sum=$((sum + a))
-  a=$b
-  b=$c
-done
-
-echo "Sum of the first 10 fibonacci numbers: $sum"
-
-Output:
-0
-1
-1
-2
-3
-5
-8
-13
-21
-34
-Sum of the first 10 fibonacci numbers: 88
-
-====================================================
-
-Q4) Sum of Prime Numbers from 1 to 100
---------------------------------------
-File: sumPrime.sh
-
-Script:
-sum=0
-
-for (( num=2; num<=100; num++ ))
-do
-  is_prime=1
-  for (( i=2; i*i<=num; i++ ))
-  do
-    if (( num % i == 0 )); then
-      is_prime=0
-      break
-    fi
-  done
-
-  if (( is_prime == 1 )); then
-    sum=$((sum + num))
-  fi
-done
-
-echo "Sum of prime numbers from 1 to 100 is: $sum"
-
-Output:
-Sum of prime numbers from 1 to 100 is: 1060
+Enter number a:  
+6  
+Enter number b:  
+8  
+Enter number c:  
+12  
+LCM of 6 and 8 is: 24  
+GCD of 8 and 12 is: 4  
 
 ====================================================
