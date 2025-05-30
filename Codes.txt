@@ -4,7 +4,7 @@
 
 Q1) Fibonacci Series (First 10 Numbers)
 ---------------------------------------
-File: Q1.sh
+File: Fibonacci.sh
 
 Script:
 echo "Enter number: "
@@ -29,8 +29,8 @@ fibonacci(){
 fibonacci $number
 
 Run:
-chmod 777 Q1.sh  
-./Q1.sh
+chmod 777 Fibonacci.sh  
+./Fibonacci.sh
 
 Example Output:
 Enter number:  
@@ -42,7 +42,7 @@ First 10 fibonacci numbers
 
 Q2) Factorial of a Number
 --------------------------
-File: Q2.sh
+File: Factorial.sh
 
 Script:
 echo "Enter number to find factorial: "
@@ -56,8 +56,8 @@ done
 echo "Factorial of $number is: $fact"
 
 Run:
-chmod 777 Q2.sh  
-./Q2.sh
+chmod 777 Factorial.sh  
+./Factorial.sh
 
 Example Output:
 Enter number to find factorial:  
@@ -68,7 +68,7 @@ Factorial of 5 is: 120
 
 Q3) Find Multiples of 3 in Range 1 to 50
 ----------------------------------------
-File: Q3.sh
+File: MulTable.sh
 
 Script:
 for((i=1;i<=50;i++))
@@ -81,8 +81,8 @@ do
 done
 
 Run:
-chmod 777 Q3.sh  
-./Q3.sh
+chmod 777 MulTable.sh  
+./MulTable.sh
 
 Example Output:
 3  
