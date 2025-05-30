@@ -1,0 +1,150 @@
+====================================================
+        Linux Shell Scripting 2025_03_31
+====================================================
+
+Q1) Small Astrology Based on Life Path Number
+---------------------------------------------
+File: Q1.sh
+
+Script:
+echo "Enter your Birth date: ";
+read date;
+a=$(($date % 10))
+b=$(($date / 10))
+c=$(($a + $b))
+case $c in
+1) echo "Lucky";;
+2) echo "Careful, do your works";;
+3) echo "Stronger";;
+4) echo "Happy";;
+5) echo "Can get help";;
+6) echo "Doubt";;
+7) echo "Sad";;
+8) echo "Like";;
+9) echo "Courage";;
+*) echo "Invalid life path number";;
+esac
+
+Run:
+chmod 777 Q1.sh  
+./Q1.sh
+
+Output Example:
+Enter your Birth date:  
+23  
+Life path number: 5  
+Can get help  
+
+************************************************************
+
+Q2) Sum and Multiplication of List of Numbers Using for Loop
+-------------------------------------------------------------
+File: Q2.sh
+
+Script:
+numbers=(1 2 3 4 5)
+sum=0
+mul=1
+for num in "${numbers[@]}"
+do
+  sum=$((sum + num))
+  mul=$((mul * num))
+done
+echo "Numbers: ${numbers[*]}"
+echo "Summation = $sum"
+echo "Multiplication = $mul"
+
+Run:
+chmod 777 Q2.sh  
+./Q2.sh
+
+Output:
+Numbers: 1 2 3 4 5  
+Summation = 15  
+Multiplication = 120  
+
+************************************************************
+
+Q3) Print Integers from 1 to 10 Using While Loop
+------------------------------------------------
+File: Q3.sh
+
+Script:
+num=1
+while [ $num -le 10 ]
+do
+  echo "$num"
+  num=$((num+1))
+done
+
+Run:
+chmod 777 Q3.sh  
+./Q3.sh
+
+Output:
+1  
+2  
+3  
+4  
+5  
+6  
+7  
+8  
+9  
+10  
+
+************************************************************
+
+Q4) Print the Following Patterns
+--------------------------------
+File: Q4.sh
+
+a) Increasing Pattern (Rows = 7, Columns = 7)
+
+Script:
+for((i=1; i<=7; i++))
+do
+  for((j=0; j<i; j++))
+  do
+    echo -n "* "
+  done
+  echo ""
+done
+
+Output:
+*  
+* *  
+* * *  
+* * * *  
+* * * * *  
+* * * * * *  
+* * * * * * *  
+
+------------------------------------------------------------
+
+b) Decreasing Pattern
+
+Script:
+for((i=1; i<=7; i++))
+do
+  for((j=7; j>=i; j--))
+  do
+    echo -n "* "
+  done
+  echo ""
+done
+
+Output:
+* * * * * * *  
+* * * * * *  
+* * * * *  
+* * * *  
+* * *  
+* *  
+*  
+
+Run:
+chmod 777 Q4.sh  
+./Q4.sh
+
+====================================================
