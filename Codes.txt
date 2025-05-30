@@ -4,7 +4,7 @@
 
 Q1) Multiplication Table using for loop
 ----------------------------------------
-File: Q1.sh
+File: ForLoopMulTable.sh
 
 Script:
 echo 'Multiplication Table'
@@ -19,8 +19,8 @@ do
 done
 
 Run:
-chmod 777 Q1.sh  
-./Q1.sh
+chmod 777 ForLoopMulTable.sh  
+./ForLoopMulTable.sh
 
 Example Output:
 Enter number:  
@@ -40,7 +40,7 @@ Enter number:
 
 Q2) Print Diamond Pattern
 --------------------------
-File: Q2.sh
+File: Diomond_01.sh
 
 Script:
 echo "Enter number of rows: "
@@ -75,8 +75,8 @@ do
 done
 
 Run:
-chmod 777 Q2.sh  
-./Q2.sh
+chmod 777 Diomond_01.sh  
+./Diomond_01.sh
 
 Example Output:
      *  
@@ -93,7 +93,7 @@ Example Output:
 
 Q3) Sum of the First 10 Fibonacci Numbers
 -----------------------------------------
-File: Q3.sh
+File: FibonacciSum.sh
 
 Script:
 a=0
@@ -112,8 +112,8 @@ done
 echo "Sum of the first 10 Fibonacci numbers: $sum"
 
 Run:
-chmod 777 Q3.sh  
-./Q3.sh
+chmod 777 FibonacciSum.sh  
+./FibonacciSum.sh
 
 Example Output:
 0  
@@ -132,7 +132,7 @@ Sum of the first 10 Fibonacci numbers: 88
 
 Q4) Sum of Prime Numbers from 1 to 100
 ---------------------------------------
-File: Q4.sh
+File: PrimeSum.sh
 
 Script:
 sum=0
@@ -156,8 +156,8 @@ done
 echo "Sum of prime numbers from 1 to 100 is: $sum"
 
 Run:
-chmod 777 Q4.sh  
-./Q4.sh
+chmod 777 PrimeSum.sh  
+./PrimeSum.sh
 
 Example Output:
 Sum of prime numbers from 1 to 100 is: 1060  
