@@ -1,5 +1,5 @@
 ====================================================
-        Linux Shell Scripting Assignment - Part 5
+        Linux Shell Scripting2025_04_18
 ====================================================
 
 Q1) Find the LCM of two numbers (a, b) and GCD of two numbers (b, c)
